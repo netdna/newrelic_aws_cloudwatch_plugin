@@ -11,6 +11,7 @@ module NewRelicAWS
           :region            => @aws_region
         )
         @cloudwatch_delay = options[:cloudwatch_delay] || 60
+        @period = options[:period] || 60
       end
 
       def get_data_point(options)
